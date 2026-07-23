@@ -136,7 +136,11 @@ app.use((req, res) => {
     res.status(404).render('404', { title: '404 - Page Not Found | Infinity Tech' });
 });
 
-app.listen(PORT, () => {
-    console.log(`🚀 Node.js server running on http://localhost:${PORT}`);
-    console.log(`🏠 Home 1 active at http://localhost:${PORT}/`);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`🚀 Node.js server running on http://localhost:${PORT}`);
+        console.log(`🏠 Home 1 active at http://localhost:${PORT}/`);
+    });
+}
+
+module.exports = app;
