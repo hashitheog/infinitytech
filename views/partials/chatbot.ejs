@@ -1,0 +1,515 @@
+<!-- Clean WhatsApp Style AI Chatbot -->
+<div id="whatsapp-chatbot-container">
+    <!-- WhatsApp Floating Trigger (FAB) -->
+    <button type="button" id="wa-fab-trigger" title="Chat with Us">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+    <!-- WhatsApp Window Modal -->
+    <div id="wa-chat-window" class="wa-hidden">
+        <!-- Minimal WhatsApp Header -->
+        <div class="wa-header">
+            <div class="wa-header-left">
+                <div class="wa-avatar-container">
+                    <img src="/img/logo/infinity-icon.svg" alt="Infinity Tech" class="wa-avatar-img">
+                    <span class="wa-online-dot"></span>
+                </div>
+                <div class="wa-contact-info">
+                    <div class="wa-name-row">
+                        <span class="wa-name">Infinity Tech</span>
+                        <i class="fa-solid fa-circle-check wa-verified-icon" title="Verified"></i>
+                    </div>
+                    <span class="wa-subtitle">+252615565249 • online</span>
+                </div>
+            </div>
+            <div class="wa-header-actions">
+                <button type="button" id="wa-close-btn" class="wa-action-icon" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+
+        <!-- Action Banner -->
+        <div class="wa-banner">
+            <span class="wa-banner-text"><i class="fa-solid fa-shield-halved me-1"></i> AI & WhatsApp Support</span>
+            <a href="https://wa.me/252615565249?text=Hello%20Infinity%20Tech%2C%20I%20would%20like%20to%20speak%20to%20a%20real%20person" target="_blank" rel="noopener noreferrer" class="wa-human-btn">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+
+        <!-- Chat Body / Wallpaper -->
+        <div id="wa-chat-body">
+            <div class="wa-date-divider">
+                <span>TODAY</span>
+            </div>
+
+            <!-- Bot Initial Message -->
+            <div class="wa-msg-row wa-msg-in">
+                <div class="wa-bubble">
+                    <p class="wa-msg-text">Asc! 👋 Welcome to Infinity Tech Somalia.</p>
+                    <p class="wa-msg-text">Ask us about Mobile Apps, Web Dev, or School SaaS!</p>
+                    <span class="wa-time">10:45 AM <i class="fa-solid fa-check-double wa-checks"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Question Pills -->
+        <div class="wa-quick-pills">
+            <button type="button" class="wa-pill" data-query="What mobile app features do you offer?">📱 Mobile Apps</button>
+            <button type="button" class="wa-pill" data-query="Tell me about Web Application Dev.">🌐 Web Dev</button>
+            <button type="button" class="wa-pill" data-query="How does School SaaS platform work?">🎓 School SaaS</button>
+        </div>
+
+        <!-- Clean Input Footer Bar -->
+        <form id="wa-chat-form">
+            <input type="text" id="wa-input" placeholder="Type a message..." autocomplete="off">
+            <button type="submit" id="wa-send-btn" title="Send">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+<style>
+/* Clean WhatsApp Dark Mode Scoped Styling */
+#whatsapp-chatbot-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#whatsapp-chatbot-container #wa-fab-trigger {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+#whatsapp-chatbot-container #wa-fab-trigger:hover {
+    transform: scale(1.08);
+}
+
+#whatsapp-chatbot-container #wa-chat-window {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 360px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 80vh;
+    background: #0B141A;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#whatsapp-chatbot-container #wa-chat-window.wa-hidden {
+    display: none !important;
+}
+
+.wa-header {
+    background: #202C33;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wa-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wa-avatar-container {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    background: #111B21;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wa-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.wa-online-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 9px;
+    height: 9px;
+    background: #25D366;
+    border-radius: 50%;
+    border: 2px solid #202C33;
+}
+
+.wa-contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.wa-name-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wa-name {
+    color: #E9EDEF;
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
+.wa-verified-icon {
+    color: #00A884;
+    font-size: 12px;
+}
+
+.wa-subtitle {
+    color: #8696A0;
+    font-size: 11.5px;
+}
+
+.wa-header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.wa-action-icon {
+    color: #AEBAC1;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.wa-action-icon:hover {
+    color: #FFFFFF;
+}
+
+.wa-banner {
+    background: #182229;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wa-banner-text {
+    color: #8696A0;
+    font-size: 11px;
+}
+
+.wa-human-btn {
+    background: #00A884;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.wa-human-btn:hover {
+    background: #029071;
+    color: #FFFFFF;
+}
+
+#wa-chat-body {
+    flex: 1;
+    padding: 12px 14px;
+    overflow-y: auto;
+    background-color: #0B141A;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wa-date-divider {
+    text-align: center;
+    margin: 4px 0;
+}
+
+.wa-date-divider span {
+    background: #182229;
+    color: #8696A0;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.wa-msg-row {
+    display: flex;
+    width: 100%;
+}
+
+.wa-msg-in {
+    justify-content: flex-start;
+}
+
+.wa-msg-out {
+    justify-content: flex-end;
+}
+
+.wa-bubble {
+    position: relative;
+    max-width: 85%;
+    padding: 8px 12px 16px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.wa-msg-in .wa-bubble {
+    background: #202C33;
+    color: #E9EDEF;
+    border-top-left-radius: 0px;
+}
+
+.wa-msg-out .wa-bubble {
+    background: #005C4B;
+    color: #E9EDEF;
+    border-top-right-radius: 0px;
+}
+
+.wa-msg-text {
+    margin: 0 0 3px 0;
+}
+
+.wa-msg-text:last-child {
+    margin-bottom: 0;
+}
+
+.wa-time {
+    position: absolute;
+    bottom: 2px;
+    right: 8px;
+    font-size: 9.5px;
+    color: #8696A0;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.wa-msg-out .wa-time {
+    color: #79A39D;
+}
+
+.wa-checks {
+    color: #53BDEB;
+}
+
+.chat-img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin: 6px 0;
+    display: block;
+}
+
+.wa-quick-pills {
+    display: flex;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #111B21;
+    overflow-x: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wa-pill {
+    background: #202C33;
+    color: #00A884;
+    border: 1px solid rgba(0, 168, 132, 0.3);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.wa-pill:hover {
+    background: #00A884;
+    color: #FFFFFF;
+}
+
+#wa-chat-form {
+    background: #202C33;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#wa-input {
+    flex: 1;
+    background: #2A3942;
+    border: none;
+    color: #E9EDEF;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+}
+
+#wa-input::placeholder {
+    color: #8696A0;
+}
+
+#wa-send-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #00A884;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+#wa-send-btn:hover {
+    background: #029071;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const trigger = document.getElementById('wa-fab-trigger');
+    const closeBtn = document.getElementById('wa-close-btn');
+    const windowModal = document.getElementById('wa-chat-window');
+    const form = document.getElementById('wa-chat-form');
+    const input = document.getElementById('wa-input');
+    const body = document.getElementById('wa-chat-body');
+    const pills = document.querySelectorAll('.wa-pill');
+
+    let history = [];
+
+    if (trigger && windowModal && closeBtn) {
+        trigger.addEventListener('click', function() {
+            windowModal.classList.toggle('wa-hidden');
+            if (!windowModal.classList.contains('wa-hidden')) {
+                input.focus();
+            }
+        });
+
+        closeBtn.addEventListener('click', function() {
+            windowModal.classList.add('wa-hidden');
+        });
+    }
+
+    pills.forEach(pill => {
+        pill.addEventListener('click', function() {
+            const query = this.getAttribute('data-query');
+            if (query) {
+                sendWaMessage(query);
+            }
+        });
+    });
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const text = input.value.trim();
+            if (text) {
+                sendWaMessage(text);
+                input.value = '';
+            }
+        });
+    }
+
+    function getCurrentTime() {
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12 || 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        return hours + ':' + minutes + ' ' + ampm;
+    }
+
+    function appendWaBubble(role, htmlContent) {
+        const row = document.createElement('div');
+        row.className = 'wa-msg-row ' + (role === 'user' ? 'wa-msg-out' : 'wa-msg-in');
+
+        const bubble = document.createElement('div');
+        bubble.className = 'wa-bubble';
+
+        const timeStr = getCurrentTime();
+        bubble.innerHTML = htmlContent + '<span class="wa-time">' + timeStr + ' <i class="fa-solid fa-check-double wa-checks"></i></span>';
+        row.appendChild(bubble);
+        body.appendChild(row);
+        body.scrollTop = body.scrollHeight;
+    }
+
+    async function sendWaMessage(text) {
+        appendWaBubble('user', '<p class="wa-msg-text">' + escapeWaText(text) + '</p>');
+        history.push({ role: 'user', content: text });
+
+        const typingId = 'wa-typing-' + Date.now();
+        const typingRow = document.createElement('div');
+        typingRow.className = 'wa-msg-row wa-msg-in';
+        typingRow.id = typingId;
+        typingRow.innerHTML = '<div class="wa-bubble"><p class="wa-msg-text" style="color:#8696A0; font-style:italic;">typing...</p></div>';
+        body.appendChild(typingRow);
+        body.scrollTop = body.scrollHeight;
+
+        try {
+            const res = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: text, history: history.slice(-4) })
+            });
+
+            const data = await res.json();
+            
+            const typingElem = document.getElementById(typingId);
+            if (typingElem) typingElem.remove();
+
+            if (data.reply) {
+                let formatted = data.reply
+                    .replace(/!\[([^\]]*)\]\(([^\)]+)\)/g, '<img src="$2" alt="$1" class="chat-img">')
+                    .replace(/\n/g, '<br>');
+
+                appendWaBubble('bot', '<div class="wa-msg-text">' + formatted + '</div>');
+                history.push({ role: 'assistant', content: data.reply });
+            } else {
+                appendWaBubble('bot', '<p class="wa-msg-text">We build Mobile Apps, Web Dev & School SaaS in Somalia. Want to chat on <a href="https://wa.me/252615565249" target="_blank" style="color:#25D366; font-weight:bold;">WhatsApp (+252615565249)</a>?</p>');
+            }
+        } catch (err) {
+            const typingElem = document.getElementById(typingId);
+            if (typingElem) typingElem.remove();
+
+            appendWaBubble('bot', '<p class="wa-msg-text">Contact our team directly on <a href="https://wa.me/252615565249" target="_blank" style="color:#25D366; font-weight:bold;">WhatsApp (+252615565249)</a>!</p>');
+        }
+    }
+
+    function escapeWaText(str) {
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+});
+</script>

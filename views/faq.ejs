@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head_css") %>
+</head>
+
+<body>
+
+    <%- include("partials/loader") %>
+
+    <%- include("partials/navbar") %>
+
+    <main>
+
+        <!--================= Banner section start =================-->
+        <section class="vl-breadcrumb-bg p-relative z-index-1 fix pt-190 pb--70" style="background-image: url(/img/banner/vl-breadcrumb-bg.png);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6 mb-30">
+                        <div class="vl-breadcrumb">
+                            <h1 class="vl-fs-60 vl-white pb-24">Frequently Asked Questions</h1>
+                            <div class="vl-breadcrumb-list">
+                                <span><a href="index">Home</a></span>
+                                <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
+                                <span class="active"><a href="#">FAQ</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6 mb-30">
+                        <div class="vl-hero-img p-relative">
+                            <div class="vl-hero-shape-4">
+                                <div class="vl-shape-2">
+                                    <img src="/img/icons/vl-emoji-4.2.svg" alt="">
+                                </div>
+                                <div class="vl-shape-3">
+                                    <img src="/img/icons/vl-emoji-4.3.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="vl-breadcrumb-fan">
+                                <img class="w-100" src="/img/icons/vl-fan-sm.svg" alt="">
+                            </div>
+                            <div class="vl-breadcrumb-img text-center">
+                                <img src="/img/banner/infinity-hero-transparent.png" alt="Infinity Tech FAQ" style="transform: scale(0.90); transform-origin: center center; max-height: 320px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================= Banner section End =================-->
+
+        <!--================= FAQ section start =================-->
+        <section class="vl-faq-iner pt-100 pb-70">
+            <div class="container">
+                <div class="vl-faq-iner-title text-center">
+                    <h3 class="vl-fs-44 vl-lineheight-44 vl-text-cmn-blck pb-16 m-0">Got Questions? We Have Answers</h3>
+                    <p class="vl-text-para vl-fs-18 pb-32">Everything you need to know about our Mobile Apps, Web Applications, and School SaaS Platform.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="vl-faq-tab mb-48">
+                            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">All Questions</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mobile-tab" data-bs-toggle="tab" data-bs-target="#mobile-tab-pane" type="button" role="tab" aria-controls="mobile-tab-pane" aria-selected="false">📱 Mobile Apps</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="web-tab" data-bs-toggle="tab" data-bs-target="#web-tab-pane" type="button" role="tab" aria-controls="web-tab-pane" aria-selected="false">🌐 Web Dev</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="saas-tab" data-bs-toggle="tab" data-bs-target="#saas-tab-pane" type="button" role="tab" aria-controls="saas-tab-pane" aria-selected="false">🎓 School SaaS</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="support-tab" data-bs-toggle="tab" data-bs-target="#support-tab-pane" type="button" role="tab" aria-controls="support-tab-pane" aria-selected="false">📞 Support</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="tab-content" id="myTabContent">
+
+                                <!-- TAB 1: ALL QUESTIONS -->
+                                <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="accordion" id="accordionAllLeft">
+                                                <!-- Q1: Mobile Frameworks -->
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingA1">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA1" aria-expanded="true" aria-controls="collapseA1">
+                                                            What mobile app development technologies do you use?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseA1" class="accordion-collapse collapse show" aria-labelledby="headingA1" data-bs-parent="#accordionAllLeft">
+                                                        <div class="accordion-body">
+                                                            <p>We build high-performance native iOS and Android mobile applications using Flutter, React Native, Swift, and Kotlin, engineered specifically for fast responsiveness on local 4G/5G mobile networks in Somalia.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q2: Web Performance -->
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingA2">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA2" aria-expanded="false" aria-controls="collapseA2">
+                                                            How fast will my custom website or web application load?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseA2" class="accordion-collapse collapse" aria-labelledby="headingA2" data-bs-parent="#accordionAllLeft">
+                                                        <div class="accordion-body">
+                                                            <p>Every web application engineered by Infinity Tech uses Node.js, Express, and React to guarantee sub-2 second page load speeds, full responsiveness across all screen sizes, and search engine optimization (SEO).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q3: School SaaS Automation -->
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingA3">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA3" aria-expanded="false" aria-controls="collapseA3">
+                                                            What features are included in Infinity Tech’s School SaaS platform?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseA3" class="accordion-collapse collapse" aria-labelledby="headingA3" data-bs-parent="#accordionAllLeft">
+                                                        <div class="accordion-body">
+                                                            <p>Our School SaaS platform automates student registration, monthly tuition fee invoicing, parent WhatsApp and SMS notifications, teacher gradebooks, attendance tracking, and automated semester report cards for over 50+ schools.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="accordion" id="accordionAllRight">
+                                                <!-- Q4: Mobile Offline Mode -->
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingA4">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA4" aria-expanded="false" aria-controls="collapseA4">
+                                                            Do your mobile apps support offline caching and payment integration?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseA4" class="accordion-collapse collapse" aria-labelledby="headingA4" data-bs-parent="#accordionAllRight">
+                                                        <div class="accordion-body">
+                                                            <p>Yes! All mobile applications include offline data caching engines for uninterrupted use during signal drops, alongside seamless API integrations for local mobile money payment gateways and biometric login.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q5: School SaaS Cloud Security -->
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingA5">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA5" aria-expanded="false" aria-controls="collapseA5">
+                                                            How secure is student data and financial information?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseA5" class="accordion-collapse collapse" aria-labelledby="headingA5" data-bs-parent="#accordionAllRight">
+                                                        <div class="accordion-body">
+                                                            <p>We deploy multi-tenant cloud database architectures with SSL encryption, role-based access permissions for staff, and automated daily encrypted backups, maintaining a 99.9% cloud uptime SLA guarantee.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Q6: Local Support -->
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingA6">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA6" aria-expanded="false" aria-controls="collapseA6">
+                                                            Where is Infinity Tech located and how do I receive technical support?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseA6" class="accordion-collapse collapse" aria-labelledby="headingA6" data-bs-parent="#accordionAllRight">
+                                                        <div class="accordion-body">
+                                                            <p>Our engineering office is located in Wadada Debka, Somalia. We provide dedicated 24/7 technical support, system monitoring, and phone assistance at +252 615 565 249.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TAB 2: MOBILE APPS -->
+                                <div class="tab-pane fade" id="mobile-tab-pane" role="tabpanel" aria-labelledby="mobile-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-8 mx-auto">
+                                            <div class="accordion" id="accordionMobile">
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingM1">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseM1" aria-expanded="true" aria-controls="collapseM1">
+                                                            What mobile operating systems do you support?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseM1" class="accordion-collapse collapse show" aria-labelledby="headingM1" data-bs-parent="#accordionMobile">
+                                                        <div class="accordion-body">
+                                                            <p>We build cross-platform and native mobile applications for both Apple iOS (iPhone & iPad) and Google Android devices with guaranteed store publishing compliance.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingM2">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseM2" aria-expanded="false" aria-controls="collapseM2">
+                                                            Can your mobile apps integrate with local mobile payment APIs?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseM2" class="accordion-collapse collapse" aria-labelledby="headingM2" data-bs-parent="#accordionMobile">
+                                                        <div class="accordion-body">
+                                                            <p>Yes, we specialize in integrating mobile payment gateways, USSD API endpoints, and local wallet transactions directly inside your mobile application.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TAB 3: WEB DEV -->
+                                <div class="tab-pane fade" id="web-tab-pane" role="tabpanel" aria-labelledby="web-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-8 mx-auto">
+                                            <div class="accordion" id="accordionWeb">
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingW1">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseW1" aria-expanded="true" aria-controls="collapseW1">
+                                                            What technologies do you use for custom web development?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseW1" class="accordion-collapse collapse show" aria-labelledby="headingW1" data-bs-parent="#accordionWeb">
+                                                        <div class="accordion-body">
+                                                            <p>We build web applications using Node.js, Express, JavaScript, EJS, and React combined with custom Vanilla CSS for peak load performance and SEO ranking.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingW2">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseW2" aria-expanded="false" aria-controls="collapseW2">
+                                                            Will my website work seamlessly on mobile phones and tablets?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseW2" class="accordion-collapse collapse" aria-labelledby="headingW2" data-bs-parent="#accordionWeb">
+                                                        <div class="accordion-body">
+                                                            <p>100%! All websites and web portals engineered by Infinity Tech are fully responsive across smartphones, tablets, and high-resolution desktop monitors.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TAB 4: SCHOOL SAAS -->
+                                <div class="tab-pane fade" id="saas-tab-pane" role="tabpanel" aria-labelledby="saas-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-8 mx-auto">
+                                            <div class="accordion" id="accordionSaas">
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingS1">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS1" aria-expanded="true" aria-controls="collapseS1">
+                                                            Can parents track attendance and tuition invoices on mobile?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseS1" class="accordion-collapse collapse show" aria-labelledby="headingS1" data-bs-parent="#accordionSaas">
+                                                        <div class="accordion-body">
+                                                            <p>Yes, parents receive automated WhatsApp & SMS alerts regarding student attendance, exam report cards, and monthly tuition fee invoices with instant digital receipt tracking.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingS2">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseS2" aria-expanded="false" aria-controls="collapseS2">
+                                                            How many schools in Somalia use Infinity Tech’s School SaaS platform?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseS2" class="accordion-collapse collapse" aria-labelledby="headingS2" data-bs-parent="#accordionSaas">
+                                                        <div class="accordion-body">
+                                                            <p>Over 50+ primary schools, secondary academies, and higher educational institutions across Somalia rely on our School SaaS management platform daily.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TAB 5: SUPPORT -->
+                                <div class="tab-pane fade" id="support-tab-pane" role="tabpanel" aria-labelledby="support-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-8 mx-auto">
+                                            <div class="accordion" id="accordionSupport">
+                                                <div class="vl-accordion-item vl-accordion-item-2 mb-20">
+                                                    <h2 class="accordion-header" id="headingSup1">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSup1" aria-expanded="true" aria-controls="collapseSup1">
+                                                            How fast is your technical support response time?
+                                                            <span><i class="fa-regular fa-angle-down"></i></span>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseSup1" class="accordion-collapse collapse show" aria-labelledby="headingSup1" data-bs-parent="#accordionSupport">
+                                                        <div class="accordion-body">
+                                                            <p>Our Wadada Debka local engineering team responds immediately to support calls (+252 615 565 249) with 24/7 continuous system monitoring and SLA uptime protection.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================= FAQ section End =================-->
+
+        <%- include("partials/cta") %>
+
+    </main>
+
+    <%- include("partials/footer") %>
+
+    <%- include("partials/progress_circle") %>
+
+    <%- include("partials/footer_scripts") %>
+
+</body>
+
+</html>

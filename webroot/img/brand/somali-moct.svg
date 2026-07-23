@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+    <rect width="240" height="60" rx="8" fill="#00D2FF" fill-opacity="0.1"/>
+    <circle cx="30" cy="30" r="18" fill="#00D2FF"/>
+    <text x="30" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#050C36" text-anchor="middle">MOCT</text>
+    <text x="60" y="28" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">MOCT SOMALIA</text>
+    <text x="60" y="44" font-family="Arial, sans-serif" font-size="10" fill="#00D2FF">Ministry of Communications</text>
+</svg>
