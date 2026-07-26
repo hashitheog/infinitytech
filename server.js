@@ -43,10 +43,11 @@ try {
     });
 } catch (e) {}
 
-// DeepSeek API Key
+// API Keys from environment
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || '';
 
-// AI Chatbot Backend Endpoint via DeepSeek API
+// AI Chatbot Backend Endpoint via OpenRouter / DeepSeek API
 app.post('/api/chat', async (req, res) => {
     try {
         const { message, history } = req.body;
@@ -79,14 +80,29 @@ STRICT RULES FOR YOUR REPLIES:
 
         messages.push({ role: 'user', content: message });
 
-        const response = await fetch('https://api.deepseek.com/chat/completions', {
-            method: 'POST',
-            headers: {
+        let apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
+        let apiHeaders = {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${OPENROUTER_API_KEY || DEEPSEEK_API_KEY}`,
+            'HTTP-Referer': 'https://infinitytech.so',
+            'X-Title': 'Infinity Tech'
+        };
+        let apiModel = 'deepseek/deepseek-chat';
+
+        if (!OPENROUTER_API_KEY && DEEPSEEK_API_KEY) {
+            apiUrl = 'https://api.deepseek.com/chat/completions';
+            apiHeaders = {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${DEEPSEEK_API_KEY}`
-            },
+            };
+            apiModel = 'deepseek-chat';
+        }
+
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: apiHeaders,
             body: JSON.stringify({
-                model: 'deepseek-chat',
+                model: apiModel,
                 messages: messages,
                 max_tokens: 450,
                 temperature: 0.7
@@ -95,7 +111,7 @@ STRICT RULES FOR YOUR REPLIES:
 
         if (!response.ok) {
             const errText = await response.text();
-            console.error('DeepSeek API Error:', errText);
+            console.error('AI Chat API Error:', errText);
             return res.json({
                 reply: `Thanks for your message! Infinity Tech specializes in Mobile Apps, Web Dev, and School SaaS Platforms in Somalia. You can also chat directly with our team on <a href="https://wa.me/252615565249?text=Hello%20Infinity%20Tech%2C%20I%20would%20like%20to%20speak%20to%20a%20real%20person" target="_blank" style="color: #25D366; font-weight: bold;">WhatsApp (+252615565249)</a>!`
             });
