@@ -2,58 +2,59 @@
 <html lang="en">
 
 <head>
-    <%- include("partials/title_meta") %>
+    <?= $this->element("title_meta") ?>
 
-    <%- include("partials/head_css") %>
+    <?= $this->element("head_css") ?>
 </head>
 
 <body>
 
-    <%- include("partials/loader") %>
+    <?= $this->element("loader") ?>
 
-    <%- include("partials/navbar") %>
-
+    <?= $this->element("header-single/navbar") ?>
+    
     <main>
 
         <!--================= Banner section start =================-->
-        <section class="vl-hero-area vl-hero-area-4 vl-hero-bg p-relative z-index-1 fix pt-190 pb-70" style="background: radial-gradient(circle at 70% 35%, rgba(0, 210, 255, 0.35) 0%, rgba(13, 67, 254, 0.75) 45%, #030822 100%), linear-gradient(135deg, #051036 0%, #0D43FE 50%, #02061A 100%);">
+        <section class="vl-hero-area vl-hero-area-4 vl-hero-bg p-relative z-index-1 fix pt-190 pb-70" style="background-image: url(/img/banner/vl-hero-bg-4.1.png);">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row">
                     <div class="col-xl-6 mb-30">
                         <div class="vl-hero-content p-relative z-index-1">
                             <div class="vl-section-title-wrapper">
                                 <h4 class="vl-section-subtitle-5 vl-white vl-upper">IT Solutions for a Smarter Future</h4>
-                                <h1 class="vl-section-heading vl-section-heading-2 vl-white pt-16">Mobile Apps, Web Apps & School SaaS</h1>
-                                <p class="vl-section-description pt-16 pb-28">Infinity Tech builds high-performance mobile apps, custom web applications, and intuitive school management SaaS platforms.</p>
+                                <h1 class="vl-section-heading vl-section-heading-2 vl-white pt-16">IT Solutions For A Digital-First World</h1>
+                                <p class="vl-section-description pt-16 pb-28">Empower your business with cutting technology solutions <br> tailored to meet your unique needs from cloud computing.</p>
                             </div>
+
 
 
                             <div class="vl-btns mb-60">
                                 <div class="vl-herobtn vl-upper">
-                                    <a href="/service" class="theme-btn">Explore Our Solutions<span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                    <a href="#" class="theme-btn">Book a Free Consultation<span><i class="fa-regular fa-arrow-right"></i></span></a>
                                 </div>
                             </div>
 
 
                             <div class="vl-hero-counter">
                                 <div class="vl-hero-counter-box mb-30">
-                                    <span class="counter vl-white">10</span><span>+</span>
+                                    <span class="counter vl-white">90</span><span>k</span>
                                     <h4 class="vl-hero-counter-box-title vl-white pt-12">Happy Client</h4>
                                 </div>
                                 <div class="vl-hero-counter-box mb-30">
-                                    <span class="counter vl-white">25</span><span>+</span>
+                                    <span class="counter vl-white">650</span><span>+</span>
                                     <h4 class="vl-hero-counter-box-title vl-white pt-12">Total Projects</h4>
                                 </div>
 
                                 <div class="vl-hero-counter-box mb-30">
-                                    <span class="counter vl-white">80</span><span>+</span>
+                                    <span class="counter vl-white">85</span><span>+</span>
                                     <h4 class="vl-hero-counter-box-title vl-white pt-12">Work Together</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6 mb-30">
-                        <div class="vl-hero-img p-relative" style="padding: 0 10px;">
+                        <div class="vl-hero-img p-relative">
                             <div class="vl-hero-shape-4">
                                 <div class="vl-shape-1">
                                     <img src="/img/icons/vl-emoji-4.1.svg" alt="">
@@ -69,8 +70,8 @@
                             <div class="vl-hero-fan">
                                 <img class="w-100" src="/img/icons/vl-fan.svg" alt="">
                             </div>
-                            <div class="vl-hero-img-4" style="margin-top: -15px; padding: 0 10px;">
-                                <img class="w-100" src="/img/banner/infinity-hero-transparent.png" alt="Infinity Tech Developer" style="filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4)); object-fit: contain; width: 100%; height: auto; margin: 0 auto; transform: scale(1.21); transform-origin: center center;">
+                            <div class="vl-hero-img-4">
+                                <img class="w-100" src="/img/banner/vl-hero-4.1.png" alt="">
                             </div>
                             <div class="vl-hero-img-4-content">
                                 <h3 class="vl-hero-img-4-title pb-20">Worked With More Than <br> 100+ Technology</h3>
@@ -90,29 +91,24 @@
         </section>
         <!--================= Banner section End =================-->
 
-        <!--================= About / Why Choose Us section start =================-->
-        <section class="vl-about-area vl-gray-bg-4 p-relative fix pt-100 pb-70">
-            <!-- Subtle Background Graphic Ornaments -->
-            <div class="vl-about-shape-4 d-none d-xl-block" style="position: absolute; top: 10%; right: 3%; opacity: 0.5;">
-                <img src="/img/shape/vl-about-shape-4.1.svg" alt="" style="max-width: 140px;">
-            </div>
-
-            <div class="container p-relative z-index-1">
+        <!--================= About section start =================-->
+        <section id="about" class="vl-about-area pt-100 pb-70">
+            <div class="container">
                 <div class="row flex-lg-row flex-column-reverse align-items-center">
                     <div class="col-lg-6 mb-30">
                         <div class="vl-about-imgs vl-about-imgs-3 p-relative z-index-1 aos-init aos-animate" data-aos="fade-right" data-aos-duration="800">
                             <div class="vl-about-large4">
-                                <img class="w-100" src="/img/about/somali-why-choose-1.jpg" alt="">
+                                <img class="w-100" src="/img/about/vl-about-4.1.png" alt="">
                             </div>
                             <div class="vl-about-sm-2 d-none d-md-block">
-                                <img src="/img/about/somali-why-choose-2.jpg" alt="">
+                                <img src="/img/about/vl-about-top-sm-4.2.png" alt="">
                             </div>
 
                             <div class="vl-about-poligon-shap p-relative z-index-1 fl-right">
                                 <img src="/img/icons/vl-about-poliogon.svg" alt="">
                                 <div class="vl-about-poligon-title">
-                                    <span class="counter vl-semi vl-white">4</span><span>+</span>
-                                    <p class="vl-fs-20 vl-lineheight-20 pt-10 m-0">Years experience</p>
+                                    <span class="counter vl-semi vl-white">12</span><span>+</span>
+                                    <p class="vl-fs-20 vl-lineheight-20 pt-10 m-0">Year experience</p>
                                 </div>
                             </div>
                         </div>
@@ -121,10 +117,10 @@
                         <div class="vl-about-content-4 aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
                             <div class="vl-section-title-wrapper">
                                 <div class="vl-section-subheading">
-                                    <h4 class="vl-section-subtitle-6 vl-upper">Why Choose Us</h4>
+                                    <h4 class="vl-section-subtitle-6 vl-upper">whey choose US </h4>
                                 </div>
                                 <h2 class="vl-section-title vl-section-title-2 pt-16 pb-20">Empower Your Business<br> Every Step of the Way</h2>
-                                <p class="vl-section-description-2 pb-32">Whether optimizing IT infrastructure, enhancing cloud security, or driving mobile & web app innovation, Infinity Tech delivers seamless execution.</p>
+                                <p class="vl-section-description-2 pb-32">Whether it optimizing IT infrastructure, enhancing cybersecurity, <br>or driving digital transformation, we are committed to helping.</p>
 
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
@@ -133,8 +129,8 @@
                                                 <span><img src="/img/icons/vl-ser-ic-4.1.svg" alt=""></span>
                                             </div>
                                             <div class="vl-about-icon-box-4-content4">
-                                                <h3 class="vl-about-icon-box-4-title pt-20 pb-16"><a href="/service">Custom App Development</a></h3>
-                                                <p>Innovative, reliable, and scalable web & mobile software.</p>
+                                                <h3 class="vl-about-icon-box-4-title pt-20 pb-16"><a href="service-single">Excellence in Solution</a></h3>
+                                                <p>We are committed delivering innovative, reliable & scalable.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -145,8 +141,8 @@
                                                 <span><img src="/img/icons/vl-ser-ic-4.2.svg" alt=""></span>
                                             </div>
                                             <div class="vl-about-icon-box-4-content4">
-                                                <h3 class="vl-about-icon-box-4-title pt-20 pb-16"><a href="/service">School SaaS Solutions</a></h3>
-                                                <p>All-in-one educational portals, tuition & grading automation.</p>
+                                                <h3 class="vl-about-icon-box-4-title pt-20 pb-16"><a href="service-single">Difference We Deliver</a></h3>
+                                                <p>Our team of experts brings <br> years of experience across.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -165,7 +161,7 @@
         <!--================= About section End =================-->
 
         <!--================= Service section start =================-->
-        <section class="vl-service-area vl-gray-bg-4 pt-100 pb-70">
+        <section id="service" class="vl-service-area vl-gray-bg-4 pt-100 pb-70">
             <div class="container">
                 <div class="vl-section-title-wrapper text-center mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
                     <div class="vl-section-subheading">
@@ -181,9 +177,9 @@
                                 <span><img src="/img/icons/vl-ser-ic-4.11.svg" alt=""></span>
                             </div>
                             <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Mobile App Development</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Custom iOS & Android mobile applications designed for high performance, intuitive UI/UX, and seamless scalability across Somalia.</p>
-                                <a href="/service" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="service-single">Excellence in Solution</a></h3>
+                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Leverage the power cloud to enhance <br> scalability, flexibility, and performance <br>Our cloud computing solutions secure.</p>
+                                <a href="service-single" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -196,9 +192,9 @@
                                 <span><img src="/img/icons/vl-ser-ic-4.22.svg" alt=""></span>
                             </div>
                             <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Web App Development</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Custom web applications and interactive portals engineered with modern Node.js and cloud technologies for businesses.</p>
-                                <a href="/service" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="service-single">IT Infrastcture Management</a></h3>
+                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Optimize your business operations with <br> reliable IT infrastructure management <br> From network setup to hardware.</p>
+                                <a href="service-single" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -211,9 +207,9 @@
                                 <span><img src="/img/icons/vl-ser-ic-4.3.svg" alt=""></span>
                             </div>
                             <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">School SaaS Platforms</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">All-in-one school management software featuring student portals, fee tracking, attendance, grading, and parent communication.</p>
-                                <a href="/service" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="service-single">Cybersecurity Services</a></h3>
+                                <p class="vl-fs-18 vl-lineheight-28 pb-24">In today’s digital world, protecting your <br> data is more critical than ever. Our Best <br> comprehensive cybersecurity services.</p>
+                                <a href="service-single" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -226,9 +222,9 @@
                                 <span><img src="/img/icons/vl-ser-ic-4.4.svg" alt=""></span>
                             </div>
                             <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Enterprise IT Solutions</a></h3>
+                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="service-single">IT Consulting & Strategy</a></h3>
                                 <p class="vl-fs-18 vl-lineheight-28 pb-24">Achieve your business goal with expert <br> IT consulting and strategy services Our <br>consultants work with you to identify.</p>
-                                <a href="/service" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                <a href="service-single" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -241,9 +237,9 @@
                                 <span><img src="/img/icons/vl-ser-ic-4.5.svg" alt=""></span>
                             </div>
                             <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Custom Software Engineering</a></h3>
+                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="service-single">Managed IT Services</a></h3>
                                 <p class="vl-fs-18 vl-lineheight-28 pb-24">Focus on your core business while we <br> manage your IT operation our managed <br> services include 24/7 monitoring.</p>
-                                <a href="/service" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                <a href="service-single" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -256,9 +252,9 @@
                                 <span><img src="/img/icons/vl-ser-ic-4.6.svg" alt=""></span>
                             </div>
                             <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Cloud & SaaS Hosting</a></h3>
+                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="service-single">Network Design & Security</a></h3>
                                 <p class="vl-fs-18 vl-lineheight-28 pb-24">Create a robust and secure network <br> infrastructure with our design security <br> services we develop networks that.</p>
-                                <a href="/service" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                <a href="service-single" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -269,7 +265,7 @@
         <!--================= Service section End =================-->
 
         <!--================= Case Studies section start =================-->
-        <section class="vl-gallery p-relative z-index-1 pt-100 pb-100">
+        <section id="cases" class="vl-gallery p-relative z-index-1 pt-100 pb-100">
             <div class="container">
                 <div class="vl-section-title-wrapper text-center mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
                     <div class="vl-section-subheading">
@@ -284,14 +280,14 @@
                     <!-- single testimonial box start -->
                     <div class="vl-gallery-testimonial-2 br-4 fix p-relative z-index-1">
                         <div class="vl-gallery-testimonial-2-image">
-                            <img class="w-100" src="/img/studies/case-mobile-app.jpg" alt="Mobile App Development">
+                            <img class="w-100" src="/img/studies/vl-studies-2.1.png" alt="">
                         </div>
                         <div class="vl-gallery-testimonial-2-con">
-                            <h3 class="vl-gallery-testimonial-2-title"><a href="/service-mobile-app">Mobile App Development</a></h3>
+                            <h3 class="vl-gallery-testimonial-2-title"><a href="case-studies-single">Efficiency Managed IT Services</a></h3>
                         </div>
                         <div class="vl-gallery-poligon">
-                            <h3><a href="/service-mobile-app">Learn More</a></h3>
-                            <a href="/service-mobile-app"><span><i class="fa-regular fa-arrow-right"></i></span></a>
+                            <h3><a href="case-studies-single">Read More</a></h3>
+                            <a href="case-studies-single"><span><i class="fa-regular fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                     <!-- single testimonial box end -->
@@ -299,14 +295,14 @@
                     <!-- single testimonial box start -->
                     <div class="vl-gallery-testimonial-2 br-4 fix p-relative z-index-1">
                         <div class="vl-gallery-testimonial-2-image">
-                            <img class="w-100" src="/img/studies/case-website-dev.jpg" alt="Website Dev & Design">
+                            <img class="w-100" src="/img/studies/vl-studies-2.2.png" alt="">
                         </div>
                         <div class="vl-gallery-testimonial-2-con">
-                            <h3 class="vl-gallery-testimonial-2-title"><a href="/service-web-dev">Website Dev & Design</a></h3>
+                            <h3 class="vl-gallery-testimonial-2-title"><a href="case-studies-single">Building Resilient Networks </a></h3>
                         </div>
                         <div class="vl-gallery-poligon">
-                            <h3><a href="/service-web-dev">Learn More</a></h3>
-                            <a href="/service-web-dev"><span><i class="fa-regular fa-arrow-right"></i></span></a>
+                            <h3><a href="case-studies-single">Read More</a></h3>
+                            <a href="case-studies-single"><span><i class="fa-regular fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                     <!-- single testimonial box end -->
@@ -314,14 +310,14 @@
                     <!-- single testimonial box start -->
                     <div class="vl-gallery-testimonial-2 br-4 fix p-relative z-index-1">
                         <div class="vl-gallery-testimonial-2-image">
-                            <img class="w-100" src="/img/studies/case-saas-platform.jpg" alt="SaaS Apps Platforms">
+                            <img class="w-100" src="/img/studies/vl-studies-2.3.png" alt="">
                         </div>
                         <div class="vl-gallery-testimonial-2-con">
-                            <h3 class="vl-gallery-testimonial-2-title"><a href="/service-school-saas">School SaaS Platforms</a></h3>
+                            <h3 class="vl-gallery-testimonial-2-title"><a href="case-studies-single">Seamless Cloud Migration</a></h3>
                         </div>
                         <div class="vl-gallery-poligon">
-                            <h3><a href="/service-school-saas">Learn More</a></h3>
-                            <a href="/service-school-saas"><span><i class="fa-regular fa-arrow-right"></i></span></a>
+                            <h3><a href="case-studies-single">Read More</a></h3>
+                            <a href="case-studies-single"><span><i class="fa-regular fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                     <!-- single testimonial box end -->
@@ -329,14 +325,14 @@
                     <!-- single testimonial box start -->
                     <div class="vl-gallery-testimonial-2 br-4 fix p-relative z-index-1">
                         <div class="vl-gallery-testimonial-2-image">
-                            <img class="w-100" src="/img/studies/case-mobile-app.jpg" alt="Mobile & Web Solutions">
+                            <img class="w-100" src="/img/studies/vl-studies-2.1.png" alt="">
                         </div>
                         <div class="vl-gallery-testimonial-2-con">
-                            <h3 class="vl-gallery-testimonial-2-title"><a href="/service">Custom Tech Solutions</a></h3>
+                            <h3 class="vl-gallery-testimonial-2-title"><a href="case-studies-single">Seamless Cloud Migration</a></h3>
                         </div>
                         <div class="vl-gallery-poligon">
-                            <h3><a href="/service">Learn More</a></h3>
-                            <a href="/service"><span><i class="fa-regular fa-arrow-right"></i></span></a>
+                            <h3><a href="case-studies-single">Read More</a></h3>
+                            <a href="case-studies-single"><span><i class="fa-regular fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                     <!-- single testimonial box end -->
@@ -345,61 +341,8 @@
         </section>
         <!--================= Case Studies section End =================-->
 
-        <!--================= Why Infinity Tech section start =================-->
-        <section class="vl-service-area pt-100 pb-70">
-            <div class="container">
-                <div class="vl-section-title-wrapper text-center mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
-                    <div class="vl-section-subheading">
-                        <h4 class="vl-section-subtitle-6 vl-upper">WHY CHOOSE INFINITY TECH</h4>
-                    </div>
-                    <h2 class="vl-section-title vl-section-title-2 pt-16">Custom App & SaaS Solutions<br> Built for Somalia</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-ser-ic-4.11.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Mobile Apps (iOS & Android)</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Native & cross-platform mobile apps engineered for speed, offline support, and seamless user experiences on any device.</p>
-                                <a href="/contact" class="readmore">Get Started <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-ser-ic-4.22.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Smart Web Applications</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Modern, responsive web platforms built with Node.js, providing secure databases, analytics dashboards, and cloud integrations.</p>
-                                <a href="/contact" class="readmore">Get Started <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-ser-ic-4.3.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">School SaaS Management</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Complete school management software covering student enrollment, exam grading, tuition fee tracking, and parent notifications.</p>
-                                <a href="/contact" class="readmore">Get Started <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================= Why Infinity Tech section End =================-->
-
         <!--================= Testimonial section start =================-->
-        <section class="vl-testimonial vl-testimonial-bg-2 pt-100 pb-100">
+        <section id="testimonial" class="vl-testimonial vl-testimonial-bg-2 pt-100 pb-100">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4">
@@ -424,22 +367,22 @@
                             <!-- single testimonial slider start -->
                             <div class="vl-testimonial-box vl-testimonial-box-4 p-relative br-8">
                                 <div class="vl-testimonial-box-icon">
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
                                 </div>
                                 <div class="vl-testimonial-box-content pt-20 pb-30">
-                                    <p>“Infinity Tech transformed our school operations with their School SaaS management platform. Student grading, attendance, and fee tracking are now 100% automated and effortless!”</p>
+                                    <p>“Their feedback fuel our passion for continuous improvement and The innovation. We take immense pride in the relationships we’ve built and the trust we’ve earned through.”</p>
                                 </div>
                                 <div class="vl-testimonial-box-auth p-relative">
                                     <div class="vl-testimonial-box-auth-img">
-                                        <img src="/img/testimonial/somali-avatar-1.jpg" alt="Farhiya Mohamed">
+                                        <img src="/img/testimonial/vl-testimonial-1.2.png" alt="">
                                     </div>
                                     <div class="vl-testimonial-box-auth-content">
-                                        <h4 class="vl-testimonial-box-auth-title pb-10"><a href="/service">Farhiya Mohamed</a></h4>
-                                        <span>School Director, Debka Academy</span>
+                                        <h4 class="vl-testimonial-box-auth-title pb-10"><a href="team">Ben Stokes</a></h4>
+                                        <span>Developers</span>
                                     </div>
                                     <div class="vl-testimonial-box-quote">
                                         <img src="/img/icons/vl-testimonial-q2.svg" alt="">
@@ -451,22 +394,22 @@
                             <!-- single testimonial slider start -->
                             <div class="vl-testimonial-box vl-testimonial-box-4 p-relative br-8">
                                 <div class="vl-testimonial-box-icon">
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
                                 </div>
                                 <div class="vl-testimonial-box-content pt-20 pb-30">
-                                    <p>“The custom iOS and Android mobile app developed by Infinity Tech is fast, reliable, and beautifully designed. Our customers love the seamless mobile ordering experience!”</p>
+                                    <p>“We believe that the true measure of success lies in the satisfaction & trust of our clients. Their stories of growth and transformation inspire us to deliver excellence every step.”</p>
                                 </div>
                                 <div class="vl-testimonial-box-auth p-relative">
                                     <div class="vl-testimonial-box-auth-img">
-                                        <img src="/img/testimonial/somali-avatar-2.jpg" alt="Abdirahman Ali">
+                                        <img src="/img/testimonial/vl-testimonial-1.1.png" alt="">
                                     </div>
                                     <div class="vl-testimonial-box-auth-content">
-                                        <h4 class="vl-testimonial-box-auth-title pb-10"><a href="/service">Abdirahman Ali</a></h4>
-                                        <span>Founder, Horn Mobile Retail</span>
+                                        <h4 class="vl-testimonial-box-auth-title pb-10"><a href="team">Ben Stokes</a></h4>
+                                        <span>Developers</span>
                                     </div>
                                     <div class="vl-testimonial-box-quote">
                                         <img src="/img/icons/vl-testimonial-q2.svg" alt="">
@@ -478,49 +421,22 @@
                             <!-- single testimonial slider start -->
                             <div class="vl-testimonial-box vl-testimonial-box-4 p-relative br-8">
                                 <div class="vl-testimonial-box-icon">
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                                    <a href="#"><i class="fa-solid fa-star"></i></a>
                                 </div>
                                 <div class="vl-testimonial-box-content pt-20 pb-30">
-                                    <p>“Infinity Tech engineered a modern web application for our enterprise business. Their technical expertise in modern Node.js web development is world-class!”</p>
+                                    <p>“Their feedback fuel our passion for continuous improvement and The innovation. We take immense pride in the relationships we’ve built and the trust we’ve earned through.”</p>
                                 </div>
                                 <div class="vl-testimonial-box-auth p-relative">
                                     <div class="vl-testimonial-box-auth-img">
-                                        <img src="/img/testimonial/somali-avatar-3.jpg" alt="Hassan Omar">
+                                        <img src="/img/testimonial/vl-testimonial-1.1.png" alt="">
                                     </div>
                                     <div class="vl-testimonial-box-auth-content">
-                                        <h4 class="vl-testimonial-box-auth-title pb-10"><a href="/service">Hassan Omar</a></h4>
-                                        <span>CEO, Debka Logistics & Tech</span>
-                                    </div>
-                                    <div class="vl-testimonial-box-quote">
-                                        <img src="/img/icons/vl-testimonial-q2.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- single testimonial slider end -->
-
-                            <!-- single testimonial slider start -->
-                            <div class="vl-testimonial-box vl-testimonial-box-4 p-relative br-8">
-                                <div class="vl-testimonial-box-icon">
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                    <a href="/service"><i class="fa-solid fa-star"></i></a>
-                                </div>
-                                <div class="vl-testimonial-box-content pt-20 pb-30">
-                                    <p>“Outstanding School SaaS platform! Infinity Tech delivered exceptional quality, automating student enrollment and parent notifications seamlessly.”</p>
-                                </div>
-                                <div class="vl-testimonial-box-auth p-relative">
-                                    <div class="vl-testimonial-box-auth-img">
-                                        <img src="/img/testimonial/somali-avatar-4.jpg" alt="Aisha Dahir">
-                                    </div>
-                                    <div class="vl-testimonial-box-auth-content">
-                                        <h4 class="vl-testimonial-box-auth-title pb-10"><a href="/service">Aisha Dahir</a></h4>
-                                        <span>Principal, Somaliland Modern School</span>
+                                        <h4 class="vl-testimonial-box-auth-title pb-10"><a href="team">Ben Stokes</a></h4>
+                                        <span>Developers</span>
                                     </div>
                                     <div class="vl-testimonial-box-quote">
                                         <img src="/img/icons/vl-testimonial-q2.svg" alt="">
@@ -535,26 +451,26 @@
         </section>
         <!--================= Testimonial section End =================-->
 
-        <!--================= engagement packages section start =================-->
-        <section class="vl-pricing pt-100 pb-70">
+        <!--================= pricing section start =================-->
+        <section id="pricing" class="vl-pricing pt-100 pb-70">
             <div class="container">
                 <div class="vl-section-title-wrapper text-center mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
                     <div class="vl-section-subheading">
-                        <h4 class="vl-section-subtitle-6 vl-upper">Custom Engagement Packages</h4>
+                        <h4 class="vl-section-subtitle-6 vl-upper">Our Pricing Plan</h4>
                     </div>
-                    <h2 class="vl-section-title vl-section-title-2 pt-16">Flexible Solution Plans <br> Built for Your Business</h2>
+                    <h2 class="vl-section-title vl-section-title-2 pt-16">Technology Solutions <br> Within Your Budget</h2>
                 </div>
                 <div class="row">
-                    <!-- single engagement package box start -->
+                    <!-- single pricing box start -->
                     <div class="col-lg-4 col-md-6">
                         <div class="vl-pricing-box p-relative z-index-1 mb-30 aos-init aos-animate" data-aos="fade-right" data-aos-duration="900">
                             <div class="vl-pricing-box-price">
-                                <h3 class="price-title pb-16">Starter MVP Package</h3>
-                                <h2 class="price-number">Custom <span>Quote</span></h2>
+                                <h3 class="price-title pb-16">Basics Plan</h3>
+                                <h2 class="price-number">$49/<span>Monthly</span></h2>
                             </div>
 
                             <div class="vl-pricing-box-content">
-                                <p>Fast web or mobile application development designed to launch your business online efficiently.</p>
+                                <p>Our pricing model is designed with your <br> business in mind offer range of packages.</p>
                             </div>
                             <div class="vl-pricing-box-list">
                                 <div class="vl-pricing-box-list-box mb-20">
@@ -562,7 +478,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Custom Responsive UI/UX</p>
+                                        <p>Cyber Analytics</p>
                                     </div>
                                 </div>
 
@@ -571,7 +487,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Web & Mobile App Build</p>
+                                        <p>24/7 Consultant Service</p>
                                     </div>
                                 </div>
 
@@ -580,7 +496,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Database & API Integration</p>
+                                        <p>Great Customer Support</p>
                                     </div>
                                 </div>
 
@@ -589,7 +505,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Local Technical Support</p>
+                                        <p>Market Growth Solution</p>
                                     </div>
                                 </div>
 
@@ -598,29 +514,29 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>3 Months Free Maintenance</p>
+                                        <p>Digital Product Design</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="vl-pricing-box-btn mt-12">
                                 <div class="vl-herobtn vl-aboutbtn vl-upper">
-                                    <a href="/contact" class="theme-btn theme-btn2">Get a Quote<span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                    <a href="pricing-plan" class="theme-btn theme-btn2">choose a plan<span><i class="fa-regular fa-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- single engagement package box end -->
+                    <!-- single pricing box end -->
 
-                    <!-- single engagement package box start -->
+                    <!-- single pricing box start -->
                     <div class="col-lg-4 col-md-6">
                         <div class="vl-pricing-box active p-relative z-index-1 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100">
                             <div class="vl-pricing-box-price">
-                                <h3 class="price-title pb-16">Enterprise & SaaS</h3>
-                                <h2 class="price-number">Tailored <span>Package</span></h2>
+                                <h3 class="price-title pb-16">Classic Plan</h3>
+                                <h2 class="price-number">$65/<span>Monthly</span></h2>
                             </div>
 
                             <div class="vl-pricing-box-content active-border">
-                                <p>Complete custom software engineering for School SaaS management and enterprise platforms.</p>
+                                <p>We understand that every business has <br> unique needs and budgets that’s offer.</p>
                             </div>
                             <div class="vl-pricing-box-list">
                                 <div class="vl-pricing-box-list-box mb-20">
@@ -628,7 +544,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>School SaaS Management</p>
+                                        <p>Cyber Analytics</p>
                                     </div>
                                 </div>
 
@@ -637,7 +553,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>iOS & Android Mobile Apps</p>
+                                        <p>24/7 Consultant Service</p>
                                     </div>
                                 </div>
 
@@ -646,7 +562,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Multi-Tenant Cloud Database</p>
+                                        <p>Great Customer Support</p>
                                     </div>
                                 </div>
 
@@ -655,7 +571,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Automated Student & Fee System</p>
+                                        <p>Market Growth Solution</p>
                                     </div>
                                 </div>
 
@@ -664,29 +580,29 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>24/7 Dedicated Support</p>
+                                        <p>Digital Product Design</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="vl-pricing-box-btn mt-12">
                                 <div class="vl-herobtn vl-upper">
-                                    <a href="/contact" class="theme-btn">Get Started<span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                    <a href="#" class="theme-btn">choose a plan<span><i class="fa-regular fa-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- single engagement package box end -->
+                    <!-- single pricing box end -->
 
-                    <!-- single engagement package box start -->
+                    <!-- single pricing box start -->
                     <div class="col-lg-4 col-md-6">
                         <div class="vl-pricing-box p-relative z-index-1 mb-30 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1300">
                             <div class="vl-pricing-box-price">
-                                <h3 class="price-title pb-16">Dedicated Retainer</h3>
-                                <h2 class="price-number">Ongoing <span>Retainer</span></h2>
+                                <h3 class="price-title pb-16">Normal Plan</h3>
+                                <h2 class="price-number">$89/<span>Monthly</span></h2>
                             </div>
 
                             <div class="vl-pricing-box-content">
-                                <p>Long-term software partnership with dedicated developers, cloud monitoring, and regular updates.</p>
+                                <p>Investing in IT shouldn’t be complicated or <br> costly. Our pricing plans are structured.</p>
                             </div>
                             <div class="vl-pricing-box-list">
                                 <div class="vl-pricing-box-list-box mb-20">
@@ -694,7 +610,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Dedicated Software Team</p>
+                                        <p>Cyber Analytics</p>
                                     </div>
                                 </div>
 
@@ -703,7 +619,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Continuous Feature Updates</p>
+                                        <p>24/7 Consultant Service</p>
                                     </div>
                                 </div>
 
@@ -712,7 +628,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Cloud Security Audits</p>
+                                        <p>Great Customer Support</p>
                                     </div>
                                 </div>
 
@@ -721,7 +637,7 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>99.9% Uptime SLA Guarantee</p>
+                                        <p>Market Growth Solution</p>
                                     </div>
                                 </div>
 
@@ -730,27 +646,151 @@
                                         <span><i class="fa-regular fa-check"></i></span>
                                     </div>
                                     <div class="vl-icon-content">
-                                        <p>Direct WhatsApp & Phone Support</p>
+                                        <p>Digital Product Design</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="vl-pricing-box-btn mt-12">
                                 <div class="vl-herobtn vl-aboutbtn vl-upper">
-                                    <a href="/contact" class="theme-btn theme-btn2">Contact Us<span><i class="fa-regular fa-arrow-right"></i></span></a>
+                                    <a href="pricing-plan" class="theme-btn theme-btn2">choose a plan<span><i class="fa-regular fa-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- single engagement package box end -->
+                    <!-- single pricing box end -->
                 </div>
             </div>
         </section>
-        <!--================= engagement packages section End =================-->
+        <!--================= pricing section End =================-->
 
-        
+        <!--================= Team section start =================-->
+        <section id="team" class="vl-team vl-team-bg p-relative pt-100 pb-100">
+            <div class="container p-relative">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="vl-section-title-wrapper mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
+                            <div class="vl-section-subheading">
+                                <h4 class="vl-section-subtitle-6 vl-upper">Our Team</h4>
+                            </div>
+                            <h2 class="vl-section-title vl-section-title-2 pt-16">Dedicated Professionals,<br> Proven Results</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+
+                <div class="contain">
+                    <div id="test" class="owl-carousel owl-theme">
+                        <div class="vl-team-sin">
+                            <div class="vl-team-thumb">
+                                <div class="vl-team-shape">
+                                    <img src="/img/icons/vl-tean-shap1.svg" alt="">
+                                </div>
+                                <img class="w-100" src="/img/team/vl-team-4.1.png" alt="">
+                                <div class="vl-tem-social">
+                                    <ul>
+                                        <li><a href="#"><span><i class="fa-brands fa-facebook-f"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-linkedin-in"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-instagram"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-youtube"></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vl-team-content">
+                                <h4 class="title"><a href="team">Kendra Cremin</a></h4>
+                                <span>Network Engineer</span>
+                            </div>
+                        </div>
+                        <div class="vl-team-sin">
+                            <div class="vl-team-thumb">
+                                <div class="vl-team-shape">
+                                    <img src="/img/icons/vl-tean-shap1.svg" alt="">
+                                </div>
+                                <img class="w-100" src="/img/team/vl-team-4.2.png" alt="">
+                                <div class="vl-tem-social">
+                                    <ul>
+                                        <li><a href="#"><span><i class="fa-brands fa-facebook-f"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-linkedin-in"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-instagram"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-youtube"></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vl-team-content">
+                                <h4 class="title"><a href="team">Dennis Jacobson</a></h4>
+                                <span>CEO & Founder</span>
+                            </div>
+                        </div>
+
+                        <div class="vl-team-sin">
+                            <div class="vl-team-thumb">
+                                <div class="vl-team-shape">
+                                    <img src="/img/icons/vl-tean-shap1.svg" alt="">
+                                </div>
+                                <img class="w-100" src="/img/team/vl-team-4.3.png" alt="">
+                                <div class="vl-tem-social">
+                                    <ul>
+                                        <li><a href="#"><span><i class="fa-brands fa-facebook-f"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-linkedin-in"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-instagram"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-youtube"></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vl-team-content">
+                                <h4 class="title"><a href="team">Patricia Wilkinson</a></h4>
+                                <span>Digital Marketer</span>
+                            </div>
+                        </div>
+
+                        <div class="vl-team-sin">
+                            <div class="vl-team-thumb">
+                                <div class="vl-team-shape">
+                                    <img src="/img/icons/vl-tean-shap1.svg" alt="">
+                                </div>
+                                <img class="w-100" src="/img/team/vl-team-4.4.png" alt="">
+                                <div class="vl-tem-social">
+                                    <ul>
+                                        <li><a href="#"><span><i class="fa-brands fa-facebook-f"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-linkedin-in"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-instagram"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-youtube"></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vl-team-content">
+                                <h4 class="title"><a href="team">Jack Williamson</a></h4>
+                                <span>Digital Marketer</span>
+                            </div>
+                        </div>
+
+                        <div class="vl-team-sin">
+                            <div class="vl-team-thumb">
+                                <div class="vl-team-shape">
+                                    <img src="/img/icons/vl-tean-shap1.svg" alt="">
+                                </div>
+                                <img class="w-100" src="/img/team/vl-team-4.1.png" alt="">
+                                <div class="vl-tem-social">
+                                    <ul>
+                                        <li><a href="#"><span><i class="fa-brands fa-facebook-f"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-linkedin-in"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-instagram"></i></span></a></li>
+                                        <li><a href="#"><span><i class="fa-brands fa-youtube"></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vl-team-content">
+                                <h4 class="title"><a href="team">Kendra Cremin</a></h4>
+                                <span>Network Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================= Team section End =================-->
 
         <!--================= Blog section start =================-->
-        <section class="vl-blog pt-100 pb-70">
+        <section id="blog" class="vl-blog pt-100 pb-70">
             <div class="container">
                 <div class="vl-section-title-wrapper text-center mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
                     <div class="vl-section-subheading">
@@ -763,7 +803,7 @@
                         <!-- single blog item -->
                         <div class="vl-single-blog-item vl-single-blog-item-3 mb-30 aos-init aos-animate" data-aos="fade-right" data-aos-duration="900">
                             <div class="vl-single-blog-img vl-single-blog-img-4 br-8 fix p-relative">
-                                <a href="blog-single"><img class="w-100" src="/img/blog/somali-blog-1.jpg" alt=""></a>
+                                <a href="blog-single"><img class="w-100" src="/img/blog/vl-blog-4.1.png" alt=""></a>
                             </div>
                             <div class="vl-single-blog-4 p-relative z-index-1">
                                 <div class="vl-single-blog-right-arow">
@@ -776,7 +816,7 @@
                                             <span><img src="/img/icons/vl-calender-3.1.svg" alt=""></span>
                                         </div>
                                         <div class="vl-single-blog-meta-box-content">
-                                            <a href="#">23 July 2026</a>
+                                            <a href="#">10 October 2024</a>
                                         </div>
                                     </div>
                                     <!-- single metabox -->
@@ -785,7 +825,7 @@
                                             <span><img src="/img/icons/vl-user-3.2.svg" alt=""></span>
                                         </div>
                                         <div class="vl-single-blog-meta-box-content">
-                                            <a href="#">Abubakar Hashi</a>
+                                            <a href="#">Shakib Mahmud</a>
                                         </div>
                                     </div>
                                 </div>
@@ -802,7 +842,7 @@
                         <!-- single blog item -->
                         <div class="vl-single-blog-item vl-single-blog-item-3 mb-30 aos-init aos-animate" data-aos="fade-left" data-aos-duration="900">
                             <div class="vl-single-blog-img vl-single-blog-img-4 br-8 fix p-relative">
-                                <a href="blog-single"><img class="w-100" src="/img/blog/somali-blog-2.jpg" alt=""></a>
+                                <a href="blog-single"><img class="w-100" src="/img/blog/vl-blog-4.2.png" alt=""></a>
                             </div>
                             <div class="vl-single-blog-4 p-relative z-index-1">
                                 <div class="vl-single-blog-right-arow">
@@ -815,7 +855,7 @@
                                             <span><img src="/img/icons/vl-calender-3.1.svg" alt=""></span>
                                         </div>
                                         <div class="vl-single-blog-meta-box-content">
-                                            <a href="#">23 July 2026</a>
+                                            <a href="#">10 October 2024</a>
                                         </div>
                                     </div>
                                     <!-- single metabox -->
@@ -824,7 +864,7 @@
                                             <span><img src="/img/icons/vl-user-3.2.svg" alt=""></span>
                                         </div>
                                         <div class="vl-single-blog-meta-box-content">
-                                            <a href="#">Abubakar Hashi</a>
+                                            <a href="#">Shakib Mahmud</a>
                                         </div>
                                     </div>
                                 </div>
@@ -839,140 +879,17 @@
                 </div>
             </div>
         </section>
-        
+        <!--================= Blog section End =================-->
 
-        <!--================= Section 2: 4-Step Working Process (Native Work Cards) start =================-->
-        <section class="vl-service-area vl-gray-bg-4 pt-100 pb-70">
-            <div class="container">
-                <div class="vl-section-title-wrapper text-center mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
-                    <div class="vl-section-subheading">
-                        <h4 class="vl-section-subtitle-6 vl-upper">OUR WORKING PROCESS</h4>
-                    </div>
-                    <h2 class="vl-section-title vl-section-title-2 pt-16">From Concept to Launch in 4 Steps</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-work-3.1.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">1. Discovery & Strategy</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">We analyze your goals in Wadada Debka & outline your mobile app, web app, or SaaS architecture.</p>
-                                <a href="/contact" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-work-3.2.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">2. UI/UX Architecture</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Designing intuitive, mobile-friendly wireframes and modern interfaces engineered for engagement.</p>
-                                <a href="/contact" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-work-3.3.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">3. Agile Development</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Building high-performance Node.js APIs and native iOS & Android applications with speed.</p>
-                                <a href="/contact" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-work-3.4.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">4. Deploy & 24/7 Support</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Launching securely on cloud servers with continuous maintenance and 24/7 local support.</p>
-                                <a href="/contact" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================= Section 2: 4-Step Working Process End =================-->
-
-        
-
-        
-
-        <!--================= Section 5: Why Infinity Tech (Native Service Grid) start =================-->
-        <section class="vl-service-area vl-gray-bg-4 pt-100 pb-70">
-            <div class="container">
-                <div class="vl-section-title-wrapper text-center mb-60 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
-                    <div class="vl-section-subheading">
-                        <h4 class="vl-section-subtitle-6 vl-upper">WHY INFINITY TECH</h4>
-                    </div>
-                    <h2 class="vl-section-title vl-section-title-2 pt-16">The Premier Choice for Mobile Apps & School SaaS</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-ser-ic-4.4.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Local Technical Support</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Based right in Wadada Debka, Somalia, providing 24/7 immediate assistance and consultation (+252615565249).</p>
-                                <a href="/contact" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-ser-ic-4.5.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">High Security & Backups</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Automated daily encrypted backups and SSL security protocol protecting student data and financial transactions.</p>
-                                <a href="/contact" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-30 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300">
-                        <div class="vl-service-icon-box-4 p-relative z-index-1 fix br-8">
-                            <div class="vl-service-icon-box-4-icon4">
-                                <span><img src="/img/icons/vl-ser-ic-4.6.svg" alt=""></span>
-                            </div>
-                            <div class="vl-service-icon-box-4-content4">
-                                <h3 class="vl-service-icon-box-4-title pt-32 pb-16"><a href="/service">Custom Feature Requests</a></h3>
-                                <p class="vl-fs-18 vl-lineheight-28 pb-24">Flexible software architecture allowing custom modules for any school, university, or business workflow.</p>
-                                <a href="/contact" class="readmore">Learn More <span><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================= Section 5: Why Infinity Tech End =================-->
-
-        <%- include("partials/cta") %>
+        <?= $this->element("cta") ?>
 
     </main>
 
-    <%- include("partials/footer") %>
+    <?= $this->element("footer") ?>
 
-    <%- include("partials/progress_circle") %>
+    <?= $this->element("progress_circle") ?>
 
-    <%- include("partials/footer_scripts") %>
+    <?= $this->element("footer_scripts") ?>
 </body>
 
 </html>
